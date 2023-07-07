@@ -1,6 +1,7 @@
 /** Database setup for BizTime. */
 
-import { Client } from "pg";
+import pkg from "pg";
+const { Client } = pkg;
 
 let DB_URI;
 

@@ -1,9 +1,7 @@
 /** Server startup for BizTime. */
 
+import app from "./app.js";
 
-import { listen } from "./app";
-
-
-listen(3000, function () {
+app.listen(3000, function () {
   console.log("Listening on 3000");
 });
