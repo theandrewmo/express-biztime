@@ -1,12 +1,12 @@
 /** BizTime express application. */
 
 
-const express = require("express");
+import express, { json } from "express";
 
 const app = express();
-const ExpressError = require("./expressError")
+import ExpressError from "./expressError";
 
-app.use(express.json());
+app.use(json());
 
 
 /** 404 handler */
@@ -28,4 +28,4 @@ app.use((err, req, res, next) => {
 });
 
 
-module.exports = app;
+export default app;
