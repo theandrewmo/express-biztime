@@ -24,7 +24,7 @@ router.get('/:code', async function(req, res, next) {
         return res.json({ company: result.rows})
     } catch(e) {
         return next(e)
-    }
+    }  
 })
 
 router.post('/', async function(req, res, next) {
