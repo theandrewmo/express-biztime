@@ -21,7 +21,7 @@ router.get('/:code', async function(req, res, next) {
             const notFound = new ExpressError(`There is no company with code ${req.params.code}`, 404);
             return next(notFound)
         }
-        return res.json({ company: result.rows})
+        return res.json({ company: result.rows[0]})
     } catch(e) {
         return next(e)
     }  
