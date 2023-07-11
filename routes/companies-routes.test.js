@@ -35,7 +35,7 @@ describe("GET /companies/code", function() {
     test("Gets a company with given code", async function() {
         const resp = await request(app).get(`/companies/${testCompany.code}`)
         expect(resp.statusCode).toBe(200);
-        expect(resp.body).toEqual({company: {code: 'tc', name: 'testcompany', description: 'test description'}})
+        expect(resp.body).toEqual({company: {code: 'tc', name: 'testcompany', description: 'test description', industries: [null]}})
     })
 })
 

@@ -77,7 +77,7 @@ describe("POST /invoices", function() {
 describe("PATCH /invoices/id", function() {
     test("Updates existing invoice in database", async function() {
         const resp = await request(app).patch(`/invoices/${testInvoice.id}`)
-        .send({amt: 1000})
+        .send({amt: 1000, paid: false})
         expect(resp.statusCode).toBe(200);
         expect(resp.body).toEqual({invoice: {id: expect.any(Number),
             comp_code: 'tc',
