@@ -3,6 +3,7 @@
 import express, { json } from "express";
 import companiesRoutes from "./routes/companies.js"
 import invoicesRoutes from "./routes/invoices.js"
+import industriesRoutes from "./routes/industries.js"
 import ExpressError from "./expressError.js";
 
 const app = express();
@@ -11,6 +12,8 @@ app.use(json());
 
 app.use("/companies", companiesRoutes);
 app.use("/invoices", invoicesRoutes);
+app.use("/industries", industriesRoutes);
+
 
 /** 404 handler */
 
